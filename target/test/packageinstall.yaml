@@ -1,0 +1,15 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: cert-manager-package
+  namespace: cert-manager-package
+spec:
+  serviceAccountName: cert-manager-sa
+  packageRef:
+    refName: cert-manager.tkgdev.failk8s.com
+    versionSelection:
+      constraints: 1.1.0
+      prereleases: {}
+  values:
+  - secretRef:
+      name: cert-manager-config

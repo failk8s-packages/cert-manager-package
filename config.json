@@ -1,0 +1,9 @@
+{
+    "registry": "quay.io/failk8s",
+    "package": {
+        "name": "cert-manager",
+        "domain": "tkgdev.failk8s.com",
+        "displayName": "Cert Manager",
+        "version": "1.1.0"
+    }
+}
