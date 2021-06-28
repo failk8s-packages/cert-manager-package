@@ -25,7 +25,7 @@ cd bundle
 vendir sync
 # Add overlays and values and update README.md
 # Test
-ytt -f bundle
+ytt -f config
 # Lock images used
 kbld -f . --imgpkg-lock-output .imgpkg/images.yml
 # Publish bundle
