@@ -29,5 +29,5 @@ ytt -f config
 # Lock images used
 kbld -f . --imgpkg-lock-output .imgpkg/images.yml
 # Publish bundle
-imgpkg push --bundle quay.io/failk8s/cert-manager-package:<VERSION> --file .
+imgpkg push --bundle quay.io/failk8s/cert-manager-package:develop --file .
 ```

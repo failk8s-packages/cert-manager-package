@@ -8,7 +8,7 @@ spec:
   packageRef:
     refName: cert-manager.tkgdev.failk8s.com
     versionSelection:
-      constraints: 1.4.0
+      constraints: develop
       prereleases: {}
   values:
   - secretRef:

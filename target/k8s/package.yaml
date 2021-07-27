@@ -1,16 +1,16 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  name: cert-manager.tkgdev.failk8s.com.1.4.0
+  name: cert-manager.tkgdev.failk8s.com.develop
   namespace: kapp-controller-packaging-global
 spec:
   refName: cert-manager.tkgdev.failk8s.com
-  version: 1.4.0
+  version: develop
   template:
     spec:
       fetch:
       - imgpkgBundle:
-          image: quay.io/failk8s/cert-manager-package:1.4.0
+          image: quay.io/failk8s/cert-manager-package:develop
       template:
       - ytt:
           paths:

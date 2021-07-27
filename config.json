@@ -4,6 +4,6 @@
         "name": "cert-manager",
         "domain": "tkgdev.failk8s.com",
         "displayName": "Cert Manager",
-        "version": "1.4.0"
+        "version": "develop"
     }
 }
