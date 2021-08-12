@@ -1,7 +1,7 @@
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: PackageMetadata
 metadata:
-  name: cert-manager.tkgdev.failk8s.com
+  name: cert-manager.dev.failk8s.com
   namespace: kapp-controller-packaging-global
 spec:
   displayName: Cert Manager

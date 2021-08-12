@@ -17,17 +17,11 @@ The following configuration values can be set to customize the cert-manager inst
 This walkthrough guides you through using cert-manager...
 
 
-## Develop
+## Develop checklist
 
-```
-cd bundle
-# Update vendir.yml
-vendir sync
-# Add overlays and values and update README.md
-# Test
-ytt -f config
-# Lock images used
-kbld -f . --imgpkg-lock-output .imgpkg/images.yml
-# Publish bundle
-imgpkg push --bundle quay.io/failk8s/cert-manager-package:develop --file .
-```
+1. Update your [config.json](./config.json) with the package info
+2. Add [overlays](./src/bundle/config/overlays/) and [values](./src/bundle/config/values.yaml)
+3. Test your bundle: `ytt --data-values-file src/example-values/minikube.yaml  -f target/bundle/config` providing a sample values file from [example-values](./src/examples-values/)
+4. Build your bundle `./hack/build.sh`
+5. Publish your bundle: `./hack/push.sh`
+6. Add it to the [failk8s-repo](https://github.com/failk8s-packages/failk8s-repo) and publish the new repo and test the package from there, or [test with local files](./target/test)
