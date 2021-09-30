@@ -2,7 +2,7 @@ apiVersion: vendir.k14s.io/v1alpha1
 directories:
 - contents:
   - githubRelease:
-      url: https://api.github.com/repos/jetstack/cert-manager/releases/44643236
+      url: https://api.github.com/repos/jetstack/cert-manager/releases/48370396
     path: .
   path: config/upstream
 kind: LockConfig
