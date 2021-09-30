@@ -4,7 +4,7 @@
         "name": "cert-manager",
         "domain": "dev.failk8s.com",
         "displayName": "Cert Manager",
-        "version": "1.5.3"
+        "version": "develop"
     },
     "packages": []
 }
