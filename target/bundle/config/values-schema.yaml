@@ -1,4 +1,4 @@
-#@data/values
+#@data/values-schema
 ---
 
 #! The namespace in which to deploy cert-manager.

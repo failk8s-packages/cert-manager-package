@@ -4,6 +4,7 @@
 #@overlay/match by=overlay.subset({"kind":"CustomResourceDefinition"}), expects=6
 ---
 metadata:
+  #@overlay/match missing_ok=True
   annotations:
     #@overlay/match missing_ok=True
     cert-manager.io/inject-ca-from-secret: #@ "{}/cert-manager-webhook-ca".format(data.values.namespace)
@@ -11,6 +12,7 @@ metadata:
 #@overlay/match by=overlay.subset({"kind":"MutatingWebhookConfiguration"})
 ---
 metadata:
+  #@overlay/match missing_ok=True
   annotations:
     #@overlay/match missing_ok=True
     cert-manager.io/inject-ca-from-secret: #@ "{}/cert-manager-webhook-ca".format(data.values.namespace)
@@ -18,6 +20,7 @@ metadata:
 #@overlay/match by=overlay.subset({"kind":"ValidatingWebhookConfiguration"})
 ---
 metadata:
+  #@overlay/match missing_ok=True
   annotations:
     #@overlay/match missing_ok=True
     cert-manager.io/inject-ca-from-secret: #@ "{}/cert-manager-webhook-ca".format(data.values.namespace)

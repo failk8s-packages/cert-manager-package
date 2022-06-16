@@ -8,7 +8,7 @@ kind: Namespace
 metadata:
   name: #@ data.values.namespace
 
-#@overlay/match by=overlay.subset({"metadata": {"namespace": "cert-manager"}}), expects=10
+#@overlay/match by=overlay.subset({"metadata": {"namespace": "cert-manager"}}), expects=11
 ---
 metadata:
   namespace: #@ data.values.namespace
@@ -32,14 +32,3 @@ webhooks:
   clientConfig:
     service:
       namespace: #@ data.values.namespace
-
-#@overlay/match by=overlay.subset({"kind":"CustomResourceDefinition"}), expects=6
----
-spec:
-  conversion:
-    webhook:
-      clientConfig:
-        #@overlay/match by="name"
-        service:
-          name: cert-manager-webhook
-          namespace: #@ data.values.namespace
