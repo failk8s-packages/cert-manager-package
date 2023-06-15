@@ -1,5 +1,8 @@
 #@data/values-schema
 ---
-
 #! The namespace in which to deploy cert-manager.
 namespace: cert-manager
+aws:
+  auth:
+    irsa:
+      role: ""
