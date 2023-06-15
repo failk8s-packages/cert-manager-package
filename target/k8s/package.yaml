@@ -1,26 +1,15 @@
----
 apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
-  annotations:
-    kbld.k14s.io/images: |
-      - origins:
-        - resolved:
-            tag: 1.12.0
-            url: quay.io/failk8s/cert-manager-package:1.12.0
-        url: quay.io/failk8s/cert-manager-package@sha256:48cba279a5cc83d7d54e05a2951d5d280507411d7ee41bee58b92064dcaf5340
-  name: cert-manager.dev.failk8s.com.1.12.0
+  name: cert-manager.dev.failk8s.com.0.0.0+develop
 spec:
   refName: cert-manager.dev.failk8s.com
+  version: 0.0.0+develop
   template:
     spec:
-      deploy:
-      - kapp:
-          rawOptions:
-          - --wait-timeout=5m
       fetch:
       - imgpkgBundle:
-          image: quay.io/failk8s/cert-manager-package@sha256:48cba279a5cc83d7d54e05a2951d5d280507411d7ee41bee58b92064dcaf5340
+          image: quay.io/failk8s/cert-manager-package:develop
       template:
       - ytt:
           paths:
@@ -29,4 +18,7 @@ spec:
           paths:
           - '-'
           - .imgpkg/images.yml
-  version: 1.12.0
+      deploy:
+      - kapp:
+          rawOptions:
+          - --wait-timeout=5m
