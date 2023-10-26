@@ -1,5 +1,0 @@
-#! Add your values here (without ytt annotations)
-aws:
-  auth:
-    irsa:
-      role: arn:aws:iam::XXXXXXX:role/svc.bot.route53.cert-manager

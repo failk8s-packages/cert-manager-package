@@ -1,0 +1,5 @@
+#! Add your values here (without ytt annotations)
+serviceaccount:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::XXXXXXX:role/svc.bot.route53.cert-manager
+leaderElectionNamespace: cert-manager
